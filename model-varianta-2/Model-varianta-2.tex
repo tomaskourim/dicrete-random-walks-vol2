@@ -23,15 +23,15 @@
 
 \paragraph{Abstract.} This contribution deals with a model of
 one-dimensional Bernoulli-like random
-walk in which the position of the walker is controlled by varying transition
+walk with the position of the walker controlled by varying transition
 probabilities. These probabilities depend explicitly on the previous move
-of the walker and, therefore, implicitly on the entire walk history. Hence, the walk then is not Markov.
+of the walker and, therefore, implicitly on the entire walk history. Hence, the walk is not Markov.
 The paper follows on the recent work of the authors, the models present
 here describe how the logits of transition probabilities are changing
 in dependence on the last walk step. In the basic
 model this development is controlled by parameters. In the more general setting
-these parameter are allowed to be time-dependent, too.
-The contribution concentrates mainly to reliable estimation of model components,
+these parameters are allowed to be time-dependent, too.
+The contribution focuses mainly on reliable estimation of model components
 via the MLE procedures in the framework of the generalized linear models.
 
 \paragraph{Keywords:} Bernoulli random walk, changing transition probabilities,
@@ -41,20 +41,20 @@ time dependent parameters, logistic model.
 
 The contribution presents a model of discrete time Bernoulli-like
 random walk with probabilities of the next step depending on the
-walk past. Namely, the steps of walk are $X_t=0$ or 1, as a
+walk past. Namely, the steps of walk are $X_t=1$ or $0$, as a
 variant the walk with steps $X_t =1, -1$ is considered.
 Probabilities are $P_t=P(X_t=1)$, $t=1,2,...$, starting from
 certain $P_1$. It is assumed that these probabilities develop and
 depend on last walk steps making the walk a non-Markovian stochastic
 process. A practical inspiration of such walk
-type with steps 1,-1 comes from models of sport matches, for
+type with steps 1, -1 comes from models of sport matches, for
 instance of tennis, and sequence of its games, or in finer or
 rougher setting, its balls or its sets. Similarly, walk with steps
-1,0 can model a series of events (e.g. failures, repairs) in a
-reliability study, the step 1 denoting an event occurrence, "step"
+1, 0 can model a series of events (e.g. failures, repairs) in a
+reliability study, the ``step'' 1 denoting an event occurrence, ``step''
 0 then means no event in time interval $t$. The later case in fact
-corresponds to discrete time recurrent events counting process
-model, both event occurrence and absence changes future event
+corresponds to the discrete time recurrent events counting process
+model, where both event occurrence and absence changes future event
 probability. Thus, the models can be regarded as a simple discrete
 variants of "self-exciting" point processes, cf. Hawkes (1971).
 
@@ -65,14 +65,14 @@ Kou\v{r}im (2019). For illustration, let us here recall the
 simplest form of such a model. Two parameters, the initial
 probability $P_1$ and change parameter $\lambda$ are given, both
 in $(0,1)$. The development of walk is described via the
-development of the probability of step "1":
+development of the probability of step ``1'':
  $$
 P_{t+1}=\lambda P_t+{1-\lambda\over 2}(1-X_t). \eqno{(1)}
  $$
-In such a model, after event "1" its probability in the next step
-is reduced by $\lambda$, therefore the model is called "success
-punishing". A variant increasing $P_{t+1}$ after event "1", the
-"success rewarding" model, has
+In such a model, after event ``1'' its probability in the next step
+is reduced by $\lambda$, therefore the model is called ``success
+punishing''. A variant increasing $P_{t+1}$ after the occurrence of event ``1'', the
+``success rewarding'' model, has
  $P_{t+1}=\lambda P_t+(1-\lambda) / 2 \cdot (1+X_t).$
 
 In the paper of Kou\v{r}im, Volf (2020) several more complicated
@@ -81,8 +81,7 @@ properties of models studied. Their limiting properties were
 derived theoretically, while their behavior in small time horizon
 was examined graphically, as it could be expected that in a
 typical applied task the data would consist of a (sometimes quite
-large) set of not too long walks. Again, examples can concern to
-the data from a number of sports matches, or to records on
+large) set of not too long walks. Again, examples include data from a number of sports matches or records on
 reliability history of several technical devices during a limited
 time period. Notice also that from a sequence having
 $X_t=\pm 1$ a simple transformation $Y_t=(X_t+1)/2$ leads to a sequence
@@ -93,8 +92,8 @@ parameters $\lambda$ to probability change is given rather
 explicitly. Further, the proofs of large sample properties
 (tendencies, limits) of walks as well as of the sequences of
 probabilities are quite easy, at least in the simplest model
-version, as shown in Kou\v{r}im, Volf (2020). On the other side,
-the likelihood is complicated and the estimation of parameters
+version, as shown in Kou\v{r}im, Volf (2020). On the other hand,
+the computation of likelihood is complicated and the estimation of parameters
 difficult. In fact, the estimation procedures should use random
 search methods, approximate confidence intervals of parameters are
 then obtained by an intensive use of random generator.
@@ -111,18 +110,18 @@ will be even more important when we allow for time-dependent
 parameters.
 
 There exists a number of recent papers dealing
-with discrete random walks and time series. Thus, the paper of
+with discrete random walks and time series. The paper of
 Davis and Liu (2016)  contains a rather
 broad definition of such a process dynamics. Formally, our
 definition is covered as well, however, certain basic assumptions, e.g.
 the condition of contraction, are not fulfilled.
 
-The monograph of Ch. Weiss (2018) offers an thorough overview of models  for discrete
-valued time series, concentrating also to discrete count data and categorical processes.
+The monograph of Ch. Weiss (2018) offers a thorough overview of models  for discrete
+valued time series, focusing also on discrete count data and categorical processes.
 Models are accompanied by a number of real examples. The problem of process prediction and
 the test of model fit is discussed as well,
 
-The term "self-excited" discrete valued process is today used quite frequently,
+The term ``self-excited'' discrete valued process is used quite frequently today,
 however in a slightly different sense, see for instance Möller (2016) dealing with
 discrete valued ARMA processes  and with their regime switching caused by the
 process development (so called SETAR processes).
@@ -134,7 +133,7 @@ estimation in the framework of logistic form of the general linear
 models will be described and broadened to the case of
 time-dependent model parameters. Then the properties of obtained
 random sequences, not only of the process of observations but also
-of the process of probabilities logits, will be discussed. Model
+of the process of probability logits, will be discussed. Model
 performance and its parameters estimation will be illustrated with
 the aid of randomly generated examples. An example with
 time-varying parameters will be included, too. Methods of both parametric and non-parametric
@@ -169,8 +168,8 @@ reduces the probability of success $P_{t+1}=P(X_{t+1}=1)$ after
 $X_t=1$, while the value of $c_2$ shows the reaction of
 probabilities to the opposite result (0 or -1).
 
-Further, it is seen that the model can be re-parametrized, in the
-case 1. using parameters $c_2$ and $d=c_1-c_2$, in the case 2.
+Further, it is observed that the model can be re-parametrized, in
+case 1. using parameters $c_2$ and $d=c_1-c_2$, in case 2.
 with $d_1=(c_1+c_2)/2,\,d_2=(c_1-c_2)/2$.
 
 \section{Log-likelihood and the MLE}
@@ -184,7 +183,7 @@ with $d_1=(c_1+c_2)/2,\,d_2=(c_1-c_2)/2$.
  $$
 
 Further, $a_{t+1}=a_t+c_2+X_t d = a_1+t c_2+d\sum_{j=1}^t X_j.$
-Again, except a given (possibly unknown) starting $a_1$ all other
+Again, except for a given (and possibly unknown) starting $a_1$ all other
 $a_t$ are random.
 
 As a rule we observe $N$ processes, i.e. their outcomes $X_{t,i},
@@ -232,7 +231,7 @@ where again $Y_{t,i}=\sum_{j=1}^t X_{j,i}$.
 In both variants the model can be treated in the framework of
 logistic regression model. Then, both the 1-st and 2-nd
 derivatives of $L$ are tractable and the MLE as well as the
-asymptotic variance of estimates can be computed, with the aid of
+asymptotic variance of estimates can be computed with the aid of
 a convenient numerical procedure (e.g. the Newton--Raphson
 algorithm). In fact, these algorithms are included standardly in
 data-analysis software packages, mostly as a part of methods for
@@ -245,11 +244,11 @@ considering the random walk with steps 1 or 0.
 \section{On properties of sequences $a_t$ and $P_t$}
 
 In Kou\v{r}im and Volf (2020) some interesting properties of model
-(1) have been derived. It concerned to development of random
-sequence of probabilities $P_t$ as well as of random sums
+(1) have been derived. It focused on the development of the random
+sequences of probabilities $P_t$ as well as of sums
 $S(t)=\sum_{s=1}^t X_s$. Now, we shall discuss the behavior of
 random sequences of $P_t$ and their logits $a_t$ of model (2). Let
-us summarize here some its basic properties:
+us summarize here some of its basic properties:
 
  \begin{description}
 \item i) It is seen that $a_{t+1}=a_1+k_1\cdot c_1 + k_2\cdot
@@ -284,8 +283,8 @@ different signs.
 Let us mention here also a special case with unique parameter
 $c=c_1=-c_2$. Then $a_{t+1}=a_1+k\cdot c,$ $k$ is a random, integer from
 $[-t, t]$. When $c<0$, then the sequence reduces the probability
-of repetition of preceding result, the model is then a variant of
-"success punishing" model (1). The opposite case occurs when
+of repetition of preceding result, the model is then a variant of the
+``success punishing'' model (1). The opposite case occurs when
 $c>0$. In Kou\v{r}im and Volf (2020) dealing with model (1),
 certain closed formulas for limit of expectations and variances
 E$(P_t)$, Var$(P_t)$ were derived. Though now the limit behavior
@@ -305,7 +304,7 @@ c=-0.05$.}
 
 Figure 1 shows an approximation of limit distributions of $P_t =P(X_t=1)$ when $t\to\infty$, separately for 
 even and odd $t$, in the case $a_1=0.2,\, c=-0.05$. More precisely, the figure shows the distribution of $P_t$ after
-400 and 401 steps, respectively. In both cases, final E$P_t$=0.500002, var$P_t$=0.003087, the change of distributions in last 2 steps was already smaller than $10^{-7}$.
+400 and 401 steps, respectively. In both cases, final E$P_t$=0.500002, Var$P_t$=0.003087, the change of distributions in the last 2 steps was already smaller than $10^{-7}$.
 
 Thus, the figure indicates that both stationary distributions are centered around 0.5 
 (hence, corresponding limit distribution of $a_t$ around zero). Further, 
@@ -324,7 +323,7 @@ $a_1=0.2,\, c=0.05$, below for $a_1=-0.1,\, c=0.05$.}
 
 Figure 2 shows the limit behavior of distribution of $P_t$ in the case of positive parameter $c$. 
 It is seen that now the picture is quite different, the figure indicates that the limit distribution is
-"unproper", equal to a Bernoulli distribution with certain $\cal{P}$ such that $Prob(P_t\to 1)=\cal{P}$, while $Prob(P_t\to 0)=1-\cal{P}$. 
+``unproper'', equal to a Bernoulli distribution with certain $\cal{P}$ such that $Prob(P_t\to 1)=\cal{P}$, while $Prob(P_t\to 0)=1-\cal{P}$.
 Notice that it corresponds to $a_t$ tending to $\pm \infty$, with the same probabilities.
 Moreover, it was revealed that $\cal{P}$ depends on both $a_1$ and $c$.
 The upper subplot of Figure 2 shows the distribution of $P_t$ in 
@@ -333,12 +332,12 @@ the process starting from $a_1=0.2$ and with $c=0.05$, after 1000 steps
 In fact, as it is possible to work computationally just with finite matrices and domains of values, we set values
 $a=a_1\pm 300\cdot c$ as absorbing states. Regarding the domain of $P_t$, absorbing states were then
 $Pmin\approx 4\cdot 10^{-7},\, Pmax\approx 1-3\cdot 10^{-7}$. Final distribution had
-E$P_t = 0.814653$ (in fact it is the estimate of probability $\cal{P}$), var$P_t=0.1508043$, while E$P_t\cdot (1-$E$P_t)=0.1508045$ 
+E$P_t = 0.814653$ (in fact it is the estimate of probability $\cal{P}$), Var$P_t=0.1508043$, while E$P_t\cdot (1-$E$P_t)=0.1508045$
 (this could be taken as an indication how close we are already to Bernoulli distribution).
 
 The lower subplot of Figure 2 shows the same for the case with $a_1=-0.1,\,c=0.05$.
 Now, after 1000 steps and with absorbing states constructed as above, we obtained
-E$P_t = 0.327023$, var$P_t=0.2200786$, while E$P_t\cdot (1-$E$P_t)=0.2200789$.
+E$P_t = 0.327023$, Var$P_t=0.2200786$, while E$P_t\cdot (1-$E$P_t)=0.2200789$.
 
 %%%%%%%%%%%%
 
@@ -357,13 +356,13 @@ kernel regression approach. The method described in Murphy and Sen
 (1991) is of such a type and  concerns the Cox regression model. All these approaches can again be
 incorporated to the logistic model form, just the number of
 parameters will be larger. For instance, in the following examples
-we shall use cubic polynomials for both estimated "parameters"
+we shall use cubic polynomials for both estimated ``parameters''
 $c_2,\, d$ (hence $c_1=c_2+d$ will also be a cubic polynomial),
 each will be given by four parameters of cubic curve.
 
 Further, in the last example the non-parametric moving window ML method was used as well.
 Namely, while $a_1$ was kept constant, both $c_2(t)$ and $d(t)$ were estimated repeatedly
-with the aid of Gauss kernel centered  at a set of points $T(1),...,T(M)$ selected inside 1,....K-1.
+with the aid of Gauss kernel centered  at a set of points $T(1),...,T(M)$ selected among 1,....M-1.
 These rough estimates then were smoothed secondary, again with a Gauss kernel. Then, the final
 ML estimate of $a_1$ with $c_2(t),\ d(t)$ already fixed, was computed.
 
@@ -374,8 +373,8 @@ development (Gamerman, West, 1986).
 
 \section{Numerical examples}
 
-The objective is, firstly, to study behavior of processes, and,
-secondly, to examine how well the MLE performs, in the case of
+The objective is, firstly, to study the behavior of processes, and,
+secondly, to examine how well the MLE performs in the case of
 constant parameters as well as in the case when they are
 time-evolving.
 
@@ -392,7 +391,7 @@ $a_1=0.3996 (0.2133),\,c_2=0.5869 (0.0887),\, d=-1.4802 (0.2017)$,
 
 hence $c_1=c_2+d= -0.8214 (0.1116).$
 
-It is seen that even for this case with smaller number of
+It is seen that even for this case with small number of
 observations the estimates are quite reasonable, except that the
 standard error for $a_1$ is rather large (P-value of the test of
 nullity of $a_1$ equals 0.0610).
@@ -434,21 +433,21 @@ reduced cubic model (circles).}
 
 \section{Parameters as functions of time}
 
-In the next simulated example functional "parameters" were
+In the next simulated example functional ``parameters'' were
 considered. Namely, walks had again length 100 steps, $a_1=-0.2$,
 the first $c_1(t)=-0.7\cdot (0.25)^{(t/100)}$ was increasing
 exponential curve, the second $c_2(t)=0.8\cdot (0.25)^{(t/100)^2}$
 was decreasing S-curve. Again, 100 such walks were generated.
 Functions $c_1(t)$ and $d(t)=c_1(t)-c_2(t)$ were estimated as
 cubic polynomials, in the logistic model framework. Results,
-sufficiently good approximation to real curves, are seen from
-Figure 4. Initial $a_1$ was estimated as -0,1464, with P-value of
+a sufficiently good approximation to real curves, are seen from
+Figure 4. Initial $a_1$ was estimated as -0.1464, with P-value of
 its nullity test 0.1468 (hence, its nullity cannot be rejected).
 These results, however, correspond to the full model, some
 parameters of both cubic curves were not significant, therefore a
 sequential reduction of the model was performed. Namely, at each
 reduction step one of the components with non-significant
-parameters (i.e. this one with the largest p-value of the test
+parameters (i.e. the one with the largest p-value of the test
 based on the MLE asymptotic normality) was removed from the model.
 Thus, the final model, with all components significant, had
 functions $c_2(t)=\alpha_0+\alpha_2 t^2+\alpha_3 t^3$ and
@@ -475,7 +474,7 @@ negligible. Figure 5 shows the results of this last model.
 
 The following data are taken from Exercise 16.1 of Meeker, Escobar
 (1998). The data are records of problems (failures, troubles) with
-10 computers, each followed through 105 days. The table displays
+10 computers, each followed for 105 days. The table displays
 the computer number and then days of reported and repaired
 troubles.
 
@@ -504,9 +503,9 @@ troubles.
 \medskip
 
 Thus, from our point of view, 10 walks, each of length 105 time
-units, were observed. Steps $X_t=1$, meaning the events = reported
+units, were observed. Steps $X_t=1$, representing the events = reported
 troubles, were rather sparse, just 91, in the rest of days
-$X_t=0$, i.e. nothing has occurred, nevertheless, it could be
+$X_t=0$, i.e. nothing has occurred. Nevertheless, it could be
 expected that the wear of devices was increasing.
 
 First, the model with constant parameters was fitted. The results
@@ -524,14 +523,14 @@ the probability of failure increases in time, linearly in the
 framework of model with constant parameters. Achieved maximal log-likelihood value
 equaled -295.54.
 
-In the next attempt, the model allowing for cubic dependence of
+In the next attempt, the model allowing cubic dependence of
 both $c_1(t),\,c_2(t)$ on time was applied. Its maximum likelihood
-estimate was obtained, however the most of parameters were not
-significant statistically, i.e. they were close to zero and
+estimate was obtained, however the most of the parameters were not
+statistically significant, i.e. they were close to zero and
 corresponding normal tests of their nullity had large p-values.
 Again, the model was then reduced sequentially, at each step the
 parameter with the largest (and larger than 0.1) p-value was
-eliminated. Quite astonishingly, this procedure lead to rather
+eliminated. Quite astonishingly, this procedure lead to a rather
 plain model with $c_2(t)=\beta\cdot t^2$ and function $d(t)$
 omitted, namely $a_1=-2.7797,\, \beta= 3.2931e-06$, corresponding
 p-values were $3e-63,\,0.0003$. It means that in fact
@@ -540,8 +539,8 @@ $X_t=1$ is rather negligible and the probability of such events is
 increasing (slightly, but significantly) in time. In fact, its
 logit $a(t)$ increases cubically, as from expression (2) we have
 now that $a_{t+1}=a_1+\beta\sum_{s=1}^t s^2$. On the other side,
-while the maximum of likelihood corresponding to the full cubic
-model was -292.49, the value achieved by reduced model was
+while the maximum likelihood corresponding to the full cubic
+model was -292.49, the value achieved by the reduced model was
 slightly smaller, -293.86.
 
 Finally, the moving window method was utilized, too. Figure 6
@@ -549,9 +548,9 @@ shows both the full cubic model in its upper subplot and the
 mowing window estimates, in lower subplot. It is seen that they
 are quite comparable. Final estimate of parameter $ a_1 =
 -2.7189$, the maximum of log-likelihood was -293.42.
- It is seen that results with all these models, including the model 
- with constant parameters, were quite comparable,
-from the point of maximal log-likelihood. On the other side, 
+ It is seen that the results of all these models, including the model
+with constant parameters, were quite comparable in terms
+of maximal log-likelihood. On the other side,
 certain differences of their fit can
 be traced from the following graphical analysis.
 
@@ -560,7 +559,7 @@ be traced from the following graphical analysis.
 
 In general, the objective of goodness-of-fit tests is to decide
 whether the model corresponds to observed data. There are several
-possibilities, consisting mostly in comparison of certain
+possibilities, consisting mostly of the comparison of certain
 characteristics of observed data with the same characteristics
 derived from the model. We decided to consider, as the
 characteristics suitable for graphical comparison, the cumulated
@@ -573,14 +572,14 @@ A good model should be able to generate comparable sequences of
 events. Therefore, when new walks (the same number and length) are
 generated from the model, their aggregated counting process should
 be similar to process observed. When such a generation is done
-many times, a "cloud" of counting processes is obtained. In the
+many times, a ``cloud'' of counting processes is obtained. In the
 graphical test form, this cloud of processes generated from the
 model should be around the process obtained from data. It is
 illustrated on the next Figure 7. All three models presented above
 were compared with real data. It is seen that the constant model
 (upper plot) underestimates (from the beginning) and overestimates
 (for larger times) the real process development. The other two
-models perform better, the full cubic model fit (middle plot) does
+models perform better, the full cubic model's fit (middle plot) does
 not seem to be worse than the non-parametric model in the lower
 plot.
 
@@ -599,7 +598,7 @@ Standard non-parametric estimator in the count data setting is the
 Nelson-Aalen estimator of the cumulative hazard function. In the
 case of our real data example it is given by observed counting
 process $\cal{N}(t)$ divided by the number of objects, as all objects
-are "at risk" during the whole observation period. However, such
+are ``at risk'' during the whole observation period. However, such
 an estimator does not take into account possible dependence of
 future risk on objects history. It could be incorporated via a
 regression model modeling the hazard rate change after occurred
@@ -607,11 +606,12 @@ event. Hence, hazard function is in fact a random function.
 
 Models proposed in the present paper offer an explicit description
 of such an impact of process history to actual count
-probabilities. A generalization may consist in considering a
+probabilities. A generalization may consist of considering a
 longer memory, we have explored just models with memory 1.
 Further generalization could include an influence of covariates to
-probability logits. It is due the model form that this could be
-incorporated easily via logistic regression. On the other hand, from this point of view
+probability logits.
+The model's form makes it easy to model using logistic regression.
+On the other hand, from this point of view
 certain observable events from the process history could be taken as covariates, too.
 In models studied here, this role is played by the last preceding process value.
 
